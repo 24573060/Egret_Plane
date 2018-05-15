@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventSheets layout="GameScene" previous="" next="" version="2.2">
+  <item type="instance" UID="77"/>
+  <item type="instance" UID="74"/>
+  <item type="instance" UID="26">
+    <item type="behavior" behaviorType="DragDropBehaivor" name="拖拽">
+      <item valueDataType="number" value="0" name="axes"/>
+      <item valueDataType="number" value="1" name="enabled"/>
+    </item>
+    <item type="behavior" behaviorType="BoundsOfRectBehaivor" name="边界限制">
+      <item valueDataType="number" value="0" name="boundType"/>
+      <item valueDataType="number" value="0" name="x"/>
+      <item valueDataType="number" value="0" name="y"/>
+      <item valueDataType="number" value="414" name="width"/>
+      <item valueDataType="number" value="736" name="height"/>
+    </item>
+  </item>
+  <item type="instance" UID="71">
+    <item type="behavior" behaviorType="BulletBehaivor" name="子弹">
+      <item valueDataType="number" value="300" name="speed"/>
+      <item valueDataType="number" value="0" name="acceleration"/>
+      <item valueDataType="number" value="0" name="gravity"/>
+      <item valueDataType="number" value="90" name="angle"/>
+      <item valueDataType="number" value="0" name="bounceOffSolids"/>
+      <item valueDataType="number" value="1" name="solidChangedAngle"/>
+    </item>
+    <item type="behavior" behaviorType="DestoryOutsideLayoutBehaivor" name="出界销毁">
+      <item valueDataType="number" value="1" name="type"/>
+    </item>
+  </item>
+  <item type="instance" UID="62">
+    <item initValue="10" variableType="number" variableName="middle" type="variable"/>
+    <item initValue="400" variableType="number" variableName="mscore" type="variable"/>
+    <item type="behavior" behaviorType="SolidBehaivor" name="刚体"/>
+    <item type="behavior" behaviorType="BulletBehaivor" name="子弹">
+      <item valueDataType="number" value="100" name="speed"/>
+      <item valueDataType="number" value="0" name="acceleration"/>
+      <item valueDataType="number" value="0" name="gravity"/>
+      <item valueDataType="number" value="90" name="angle"/>
+      <item valueDataType="number" value="0" name="bounceOffSolids"/>
+      <item valueDataType="number" value="2" name="solidChangedAngle"/>
+    </item>
+    <item type="behavior" behaviorType="DestoryOutsideLayoutBehaivor" name="出界销毁">
+      <item valueDataType="number" value="2" name="type"/>
+    </item>
+  </item>
+  <item type="instance" UID="59">
+    <item initValue="5" variableType="number" variableName="small" type="variable"/>
+    <item initValue="200" variableType="number" variableName="sscore" type="variable"/>
+    <item type="behavior" behaviorType="SolidBehaivor" name="刚体"/>
+    <item type="behavior" behaviorType="BulletBehaivor" name="子弹">
+      <item valueDataType="number" value="100" name="speed"/>
+      <item valueDataType="number" value="0" name="acceleration"/>
+      <item valueDataType="number" value="0" name="gravity"/>
+      <item valueDataType="number" value="90" name="angle"/>
+      <item valueDataType="number" value="0" name="bounceOffSolids"/>
+      <item valueDataType="number" value="2" name="solidChangedAngle"/>
+    </item>
+    <item type="behavior" behaviorType="DestoryOutsideLayoutBehaivor" name="出界销毁">
+      <item valueDataType="number" value="2" name="type"/>
+    </item>
+  </item>
+  <item type="instance" UID="35">
+    <item initValue="15" variableType="number" variableName="big" type="variable"/>
+    <item initValue="800" variableType="number" variableName="bscore" type="variable"/>
+    <item type="behavior" behaviorType="SolidBehaivor" name="刚体"/>
+    <item type="behavior" behaviorType="BulletBehaivor" name="子弹">
+      <item valueDataType="number" value="100" name="speed"/>
+      <item valueDataType="number" value="0" name="acceleration"/>
+      <item valueDataType="number" value="0" name="gravity"/>
+      <item valueDataType="number" value="90" name="angle"/>
+      <item valueDataType="number" value="0" name="bounceOffSolids"/>
+      <item valueDataType="number" value="2" name="solidChangedAngle"/>
+    </item>
+    <item type="behavior" behaviorType="DestoryOutsideLayoutBehaivor" name="出界销毁">
+      <item valueDataType="number" value="2" name="type"/>
+    </item>
+  </item>
+  <item type="instance" UID="29">
+    <item type="behavior" behaviorType="BulletBehaivor" name="子弹">
+      <item valueDataType="number" value="400" name="speed"/>
+      <item valueDataType="number" value="0" name="acceleration"/>
+      <item valueDataType="number" value="0" name="gravity"/>
+      <item valueDataType="number" value="-90" name="angle"/>
+      <item valueDataType="number" value="1" name="bounceOffSolids"/>
+      <item valueDataType="number" value="1" name="solidChangedAngle"/>
+    </item>
+    <item type="behavior" behaviorType="DestoryOutsideLayoutBehaivor" name="出界销毁">
+      <item valueDataType="number" value="1" name="type"/>
+    </item>
+  </item>
+  <item type="instance" UID="17">
+    <item type="behavior" behaviorType="ScrollBehaivor" name="滚屏">
+      <item valueDataType="number" value="1" name="active"/>
+      <item valueDataType="string" value="%22scrollDown%22" name="scrollDirectionType"/>
+      <item valueDataType="number" value="180" name="speed"/>
+    </item>
+  </item>
+  <item type="variable" variableName="myblood" variableType="number" initValue="50"/>
+  <item type="variable" variableName="myscore" variableType="number" initValue="0"/>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="EveryXSecondsEvent" callName="everyXSecondEvent" isTrigger="false" target="System">
+      <item valueDataType="number" value="0.1" name="interval"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="spawn" target="myplane">
+      <item valueDataType="string" value="mybullet" name="10" isFamily="false"/>
+      <item valueDataType="number" value="0" name="11"/>
+      <item valueDataType="number" value="5" name="12"/>
+      <item valueDataType="number" value="-50" name="13"/>
+      <item valueDataType="number" value="0" name="14"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="EveryXSecondsEvent" callName="everyXSecondEvent" isTrigger="false" target="System">
+      <item valueDataType="number" value="5%2Bls.random()*10" name="interval"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="createObject" target="System">
+      <item valueDataType="string" value="splane" name="23" isFamily="false"/>
+      <item valueDataType="number" value="0" name="22"/>
+      <item valueDataType="number" value="20%2Bls.random()*380" name="21"/>
+      <item valueDataType="number" value="-100" name="20"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="EveryXSecondsEvent" callName="everyXSecondEvent" isTrigger="false" target="System">
+      <item valueDataType="number" value="10%2Bls.random()*10" name="interval"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="createObject" target="System">
+      <item valueDataType="string" value="mplane" name="23" isFamily="false"/>
+      <item valueDataType="number" value="0" name="22"/>
+      <item valueDataType="number" value="20%2Bls.random()*380" name="21"/>
+      <item valueDataType="number" value="-100" name="20"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="EveryXSecondsEvent" callName="everyXSecondEvent" isTrigger="false" target="System">
+      <item valueDataType="number" value="15%2Bls.random()*10" name="interval"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="createObject" target="System">
+      <item valueDataType="string" value="bplane" name="23" isFamily="false"/>
+      <item valueDataType="number" value="0" name="22"/>
+      <item valueDataType="number" value="20%2Bls.random()*380" name="21"/>
+      <item valueDataType="number" value="-100" name="20"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="mybullet">
+      <item valueDataType="string" value="bplane" name="object" isFamily="false"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="destory" target="mybullet"/>
+    <item type="action" persistent="false" callTarget="instance" callName="subtractFrom" target="bplane">
+      <item valueDataType="string" value="big" name="10" variable="true"/>
+      <item valueDataType="number" value="1" name="11"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="CompareInstanceVariableEvent" callName="compareInstanceVariable" isTrigger="false" target="bplane">
+      <item valueDataType="string" value="big" name="instanceVariable" variable="true"/>
+      <item valueDataType="string" value="%22equalTo%22" name="operationType"/>
+      <item valueDataType="any" value="0" name="value"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="destory" target="bplane"/>
+    <item type="action" persistent="false" callTarget="instance" callName="addTo" target="System">
+      <item valueDataType="string" value="myscore" name="14" variable="true"/>
+      <item valueDataType="number" value="bplane.bscore" name="13"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setText" target="score">
+      <item valueDataType="string" value="%22%E5%BE%97%E5%88%86%EF%BC%9A%22%2BSystem.myscore" name="1"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="mybullet">
+      <item valueDataType="string" value="mplane" name="object" isFamily="false"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="destory" target="mybullet"/>
+    <item type="action" persistent="false" callTarget="instance" callName="subtractFrom" target="mplane">
+      <item valueDataType="string" value="middle" name="10" variable="true"/>
+      <item valueDataType="number" value="1" name="11"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="CompareInstanceVariableEvent" callName="compareInstanceVariable" isTrigger="false" target="mplane">
+      <item valueDataType="string" value="middle" name="instanceVariable" variable="true"/>
+      <item valueDataType="string" value="%22equalTo%22" name="operationType"/>
+      <item valueDataType="any" value="0" name="value"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="destory" target="mplane"/>
+    <item type="action" persistent="false" callTarget="instance" callName="addTo" target="System">
+      <item valueDataType="string" value="myscore" name="14" variable="true"/>
+      <item valueDataType="number" value="mplane.mscore" name="13"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setText" target="score">
+      <item valueDataType="string" value="%22%E5%BE%97%E5%88%86%EF%BC%9A%22%2BSystem.myscore" name="1"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="mybullet">
+      <item valueDataType="string" value="splane" name="object" isFamily="false"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="destory" target="mybullet"/>
+    <item type="action" persistent="false" callTarget="instance" callName="subtractFrom" target="splane">
+      <item valueDataType="string" value="small" name="10" variable="true"/>
+      <item valueDataType="number" value="1" name="11"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="CompareInstanceVariableEvent" callName="compareInstanceVariable" isTrigger="false" target="splane">
+      <item valueDataType="string" value="small" name="instanceVariable" variable="true"/>
+      <item valueDataType="string" value="%22equalTo%22" name="operationType"/>
+      <item valueDataType="any" value="0" name="value"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="destory" target="splane"/>
+    <item type="action" persistent="false" callTarget="instance" callName="addTo" target="System">
+      <item valueDataType="string" value="myscore" name="14" variable="true"/>
+      <item valueDataType="number" value="splane.sscore" name="13"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setText" target="score">
+      <item valueDataType="string" value="%22%E5%BE%97%E5%88%86%EF%BC%9A%22%2BSystem.myscore" name="1"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="enemybullet">
+      <item valueDataType="string" value="myplane" name="object" isFamily="false"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="destory" target="enemybullet"/>
+    <item type="action" persistent="false" callTarget="instance" callName="subtractFrom" target="System">
+      <item valueDataType="string" value="myblood" name="12" variable="true"/>
+      <item valueDataType="number" value="1" name="11"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setText" target="blood">
+      <item valueDataType="string" value="%22%E8%A1%80%E9%87%8F%EF%BC%9A%22%2BSystem.myblood" name="1"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="EveryXSecondsEvent" callName="everyXSecondEvent" isTrigger="false" target="System">
+      <item valueDataType="number" value="1" name="interval"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="spawn" target="bplane">
+      <item valueDataType="string" value="enemybullet" name="10" isFamily="false"/>
+      <item valueDataType="number" value="0" name="11"/>
+      <item valueDataType="number" value="0" name="12"/>
+      <item valueDataType="number" value="0" name="13"/>
+      <item valueDataType="number" value="0" name="14"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="spawn" target="splane">
+      <item valueDataType="string" value="enemybullet" name="10" isFamily="false"/>
+      <item valueDataType="number" value="0" name="11"/>
+      <item valueDataType="number" value="0" name="12"/>
+      <item valueDataType="number" value="0" name="13"/>
+      <item valueDataType="number" value="0" name="14"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="spawn" target="mplane">
+      <item valueDataType="string" value="enemybullet" name="10" isFamily="false"/>
+      <item valueDataType="number" value="0" name="11"/>
+      <item valueDataType="number" value="0" name="12"/>
+      <item valueDataType="number" value="0" name="13"/>
+      <item valueDataType="number" value="0" name="14"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="CompareVariableEvent" callName="compareVariable" isTrigger="false" target="System">
+      <item valueDataType="string" value="myscore" name="variable" variable="true"/>
+      <item valueDataType="string" value="%22greaterOrEqual%22" name="operationType"/>
+      <item valueDataType="any" value="10000" name="value"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setSpeed" target="mplane" behaviorName="子弹">
+      <item valueDataType="number" value="200" name="1"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setSpeed" target="splane" behaviorName="子弹">
+      <item valueDataType="number" value="200" name="1"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setSpeed" target="bplane" behaviorName="子弹">
+      <item valueDataType="number" value="200" name="1"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setSpeed" target="enemybullet" behaviorName="子弹">
+      <item valueDataType="number" value="350" name="1"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="CompareVariableEvent" callName="compareVariable" isTrigger="false" target="System">
+      <item valueDataType="string" value="myscore" name="variable" variable="true"/>
+      <item valueDataType="string" value="%22greaterOrEqual%22" name="operationType"/>
+      <item valueDataType="any" value="20000" name="value"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setSpeed" target="mplane" behaviorName="子弹">
+      <item valueDataType="number" value="400" name="1"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setSpeed" target="splane" behaviorName="子弹">
+      <item valueDataType="number" value="400" name="1"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setSpeed" target="bplane" behaviorName="子弹">
+      <item valueDataType="number" value="400" name="1"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setSpeed" target="enemybullet" behaviorName="子弹">
+      <item valueDataType="number" value="500" name="1"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="myplane">
+      <item valueDataType="string" value="mplane" name="object" isFamily="false"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="gotoScene" target="System">
+      <item valueDataType="string" value="%22fail%22" name="18"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="myplane">
+      <item valueDataType="string" value="bplane" name="object" isFamily="false"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="gotoScene" target="System">
+      <item valueDataType="string" value="%22fail%22" name="18"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="CompareVariableEvent" callName="compareVariable" isTrigger="false" target="System">
+      <item valueDataType="string" value="myblood" name="variable" variable="true"/>
+      <item valueDataType="string" value="%22equalTo%22" name="operationType"/>
+      <item valueDataType="any" value="0" name="value"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="gotoScene" target="System">
+      <item valueDataType="string" value="%22fail%22" name="18"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="myplane">
+      <item valueDataType="string" value="splane" name="object" isFamily="false"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="gotoScene" target="System">
+      <item valueDataType="string" value="%22fail%22" name="18"/>
+    </item>
+  </item>
+</eventSheets>

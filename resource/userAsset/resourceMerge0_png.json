@@ -1,0 +1,8 @@
+{"file":"resourceMerge0_png.png","frames":{
+"background_1.png":{"x":1,"y":1,"w":320,"h":568,"offX":0,"offY":0,"sourceW":320,"sourceH":568},
+"start.png":{"x":1,"y":570,"w":320,"h":568,"offX":0,"offY":0,"sourceW":320,"sourceH":568},
+"enemy2_fly_1.png":{"x":1,"y":1139,"w":110,"h":164,"offX":0,"offY":0,"sourceW":110,"sourceH":164},
+"myplane.png":{"x":1,"y":1304,"w":66,"h":80,"offX":0,"offY":0,"sourceW":66,"sourceH":80},
+"enemy3_fly_1.png":{"x":1,"y":1385,"w":46,"h":60,"offX":0,"offY":0,"sourceW":46,"sourceH":60},
+"enemy1_fly_1.png":{"x":1,"y":1446,"w":34,"h":24,"offX":0,"offY":0,"sourceW":34,"sourceH":24},
+"bullet.png":{"x":1,"y":1471,"w":6,"h":14,"offX":0,"offY":0,"sourceW":6,"sourceH":14}}}

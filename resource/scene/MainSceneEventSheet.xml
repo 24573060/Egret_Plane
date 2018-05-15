@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventSheets layout="MainScene" previous="" next="" version="2.2">
+  <item type="instance" UID="11">
+    <item type="behavior" behaviorType="SinBehavior" name="曲线">
+      <item valueDataType="number" value="1" name="active"/>
+      <item valueDataType="number" value="1" name="movement"/>
+      <item valueDataType="number" value="0" name="wave"/>
+      <item valueDataType="number" value="2" name="period"/>
+      <item valueDataType="number" value="0" name="periodRandom"/>
+      <item valueDataType="number" value="0" name="periodOffset"/>
+      <item valueDataType="number" value="0" name="periodOffsetRandom"/>
+      <item valueDataType="number" value="5" name="magnitude"/>
+      <item valueDataType="number" value="0" name="magnitudeRandom"/>
+    </item>
+  </item>
+  <item type="instance" UID="5"/>
+  <item type="variable" variableName="myblood" variableType="number" initValue="50"/>
+  <item type="variable" variableName="myscore" variableType="number" initValue="0"/>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnButtonBeginEvent" callName="onButtonBegin" isTrigger="true" target="AITextField10"/>
+    <item type="action" persistent="false" callTarget="instance" callName="gotoScene" target="System">
+      <item valueDataType="string" value="%22GameScene%22" name="18"/>
+    </item>
+  </item>
+</eventSheets>
